@@ -1,0 +1,888 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Agency - Start Bootstrap Theme</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      /* تغيير شكل شريط التنقل ليشبه الموجة البحرية */
+      .navbar {
+        background: linear-gradient(to right, #0097a7, #00796b, #b2ebf2, #ffffff) !important; /* تدرج لوني يشبه الموجة البحرية */
+        border-bottom: 2px solid #00796b; /* إضافة خط أسفل الشريط */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل للشريط */
+        position: relative; /* لتصميم التأثيرات الموجية */
+      }
+
+      .navbar::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: linear-gradient(to right, #00796b, #0097a7); /* تأثير موجة خفيف في الأسفل */
+        border-radius: 0 0 50% 50%; /* جعل التأثير يشبه الموجة */
+        transform: translateY(50%);
+        z-index: -1;
+      }
+
+      /* تحسين شكل النصوص في شريط التنقل */
+      .navbar-nav .nav-link {
+        color: #ffffff !important; /* لون النصوص في القائمة باللون الأبيض */
+        font-weight: bold; /* جعل النصوص بالخط العريض */
+        transition: color 0.3s ease; /* إضافة تأثير انتقال للنصوص */
+      }
+
+      /* تحسين شكل النصوص عند المرور فوقها */
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus {
+        color: #b2ebf2 !important; /* لون النصوص عند المرور فوقها */
+        text-decoration: underline; /* إضافة خط تحت النص عند المرور فوقه */
+      }
+
+      /* تحسين شكل زر القائمة المنبثقة */
+      .navbar-toggler {
+        background-color: #212121 !important; /* لون الخلفية لزر القائمة المنبثقة */
+        border: none; /* إزالة الحدود */
+        border-radius: 0.3rem; /* إضافة حواف مدورة للزر */
+      }
+
+      /* تحسين شكل أيقونة القائمة المنبثقة */
+      .navbar-toggler-icon {
+        background-color: #ffffff !important; /* لون أيقونة القائمة المنبثقة */
+        border-radius: 50%; /* جعل الأيقونة دائرية */
+      }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/logos/navbar.svg" alt="Navbar Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">مرحبنا بكم في Right Water</div>
+            <div class="masthead-heading text-uppercase">تشرفنا</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#services">أخبرني المزيد</a>
+        </div>
+    </header>
+
+    <!-- Services-->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <h3 class="section-subheading text-muted">نوفر لك خدمات متميزة في مختلف المجالات</h3>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-flask fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3 service-title">قسم المعاينة</h4>
+                    <p class="text-muted service-description">حرصاً منا على توفير وحدة معالجة المياه التي تتناسب مع نوع المياه المتوافر لديك والحصول على مياه صحية ونقية من جميع الملوثات والبكتريا الضارة، نوفر لك قسم متكامل من الخبراء المدربين للوصول لك في أي مكان لإجراء تحليل لمياه الشرب الخاصة بك بشكل مجاني بالكامل ويعد هذا بروتوكول يقدم من الشركة لضمان حصول عملائها على أفضل مياه.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-store fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3 service-title">قسم المبيعات</h4>
+                    <p class="text-muted service-description">يوجد لدينا قسم مبيعات على أعلى مستوى مستعد دائماً للإجابة على أي أسئلة أو استفسارات مع توضيح كافة وسائل الدفع والتسهيلات بجانب التواصل الدائم مع عملائنا لإطلاعهم دائماً بأحدث عروضنا.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-tools fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3 service-title">قسم التركيبات</h4>
+                    <p class="text-muted service-description">تقوم الشركة بتوفير فريق كامل من المهندسين والفنيين المدربين على أعلى مستوى متخصص في تصميمات الديكور وجميع أنظمة المنازل والمطابخ الحديثة مما يساعد على تركيب الأجهزة مع الحفاظ على الشكل الجمالي والفني للمكان.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3 service-title">قسم الصيانة</h4>
+                    <p class="text-muted service-description">مركز خدمة ما بعد البيع والصيانة لأجهزة ووحدات معالجة المياه المنزلية يوجد لدينا أكبر مركز خدمة وصيانة لأجهزة وحدات معالجة المياه المنزلية لخدمة ما بعد البيع لجميع أنواع الأجهزة سواء الموردة من شركتنا أو من غيرها. ويتميز المركز بنخبة من أعلى الكفاءات المدربة من المهندسين والفنيين كما يوجد نظام مسجل على الحاسب الآلي لمواعيد الصيانة الدورية لكل جهاز بمجرد تركيبه وأيضاً عمل كارت صيانة ومتابعة لكل جهاز باسم العميل به كافة البيانات المطلوبة.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3 service-title">قسم التطوير</h4>
+                    <p class="text-muted service-description">حرصاً منا على توفير أفضل خدمة بجانب أفضل جودة نوفر قسم متكامل لاستقبال اقتراحاتكم وشكواكم للحصول دائماً على رضاكم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+        <!-- Portfolio Grid-->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Portfolio Section</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      /* تغيير لون خلفية قسم Portfolio */
+      .page-section.bg-light {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to right, #00796b, #0097a7, #b2ebf2, #ffffff) !important; /* تدرج لوني بحري */
+      }
+
+      .page-section.bg-light::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to right, #00796b, #0097a7) !important; /* تأثير موجة في الأسفل */
+        border-radius: 0 0 50% 50%; /* جعل التأثير يشبه الموجة */
+        transform: translateY(50%);
+        z-index: -1;
+      }
+
+      .section-heading {
+        color: #00796b !important; /* لون العنوان */
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .section-subheading {
+        color: #0097a7 !important; /* لون النص الفرعي */
+        font-size: 1.2rem;
+      }
+
+      .portfolio-item {
+        border: 2px solid #00796b !important; /* إطار حول العناصر */
+        border-radius: 0.5rem;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .portfolio-hover {
+        background: rgba(0, 0, 0, 0.5) !important; /* خلفية مظللة عند المرور فوق الصورة */
+      }
+
+      .portfolio-hover-content {
+        color: #ffffff !important; /* لون الأيقونات داخل التأثير */
+      }
+
+      .portfolio-caption {
+        background: rgba(255, 255, 255, 0.8) !important; /* خلفية فاتحة للتعليقات */
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .portfolio-caption-heading {
+        color: #00796b !important; /* لون عنوان التعليق */
+        font-weight: bold;
+      }
+
+      .portfolio-caption-subheading {
+        color: #0097a7 !important; /* لون الوصف الفرعي للتعليق */
+      }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Portfolio Section -->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Portfolio</h2>
+                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Threads</div>
+                            <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Explore</div>
+                            <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Finish</div>
+                            <div class="portfolio-caption-subheading text-muted">Identity</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Lines</div>
+                            <div class="portfolio-caption-subheading text-muted">Branding</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Southwest</div>
+                            <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Retrospective</div>
+                            <div class="portfolio-caption-subheading text-muted">Photography</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+        <!-- About-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Section</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet">
+    <style>
+        .page-section {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #007BFF;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .timeline-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 0 4px #007BFF;
+            left: 50%;
+            margin-left: -50px;
+            top: 50%;
+            margin-top: -50px;
+        }
+
+        .timeline-panel {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #007BFF;
+            border-radius: 0.5rem;
+            background: #fff;
+        }
+
+        .timeline-heading h4 {
+            margin-top: 0;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .timeline-heading h4.subheading {
+            margin-bottom: 10px;
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        .timeline-body p {
+            color: #333;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+
+        .section-heading {
+            color: #007BFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .section-subheading {
+            color: #6C757D;
+            animation: fadeIn 2s 1s ease-in-out;
+        }
+
+        .timeline-inverted .timeline-image {
+            left: auto;
+            right: 50%;
+            margin-right: -50px;
+            margin-left: 0;
+            box-shadow: 0 0 0 4px #0097a7;
+        }
+
+        .timeline-inverted .timeline-panel {
+            float: right;
+            border-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+    <!-- About Section -->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">✨ معلومات عنا ✨</h2>
+                <h3 class="section-subheading text-muted">🌟 Right Water لتكنولوجيا معالجة و تنقية المياه 🌟</h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                    <div class="timeline-panel" style="animation: slideInLeft 2s ease-in-out;">
+                        <div class="timeline-heading">
+                            <h4>🔹 2013</h4>
+                            <h4 class="subheading">🔹 رحلتنا وإنجازاتنا الملحوظة 🔹</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">بدات،رحلتها،Right Waterعام 2013 مصر. ومنذ ذلك الحين، حققت الشركة سلسلة من الإنجازات الملحوظة في مجال تنقية المياه، مما جعلها تحتل مركزًا رائدًا في السوق المحلية والعالمية. بفضل الابتكارات والتقنيات الثورية التي قامت بها الشركة، استطاعت جلب تكنولوجيا التناضح العكسي الثورية (RO) إلى مصر وتوفير حلول تنقية المياه ذات الجودة العالية.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                    <div class="timeline-panel" style="animation: slideInRight 2s ease-in-out;">
+                        <div class="timeline-heading">
+                            <h4>🌟 رؤيتنا 🌟</h4>
+                            <h4 class="subheading">🌟 رؤية ملتزمة بالابتكار والحلول المبتكرة 🌟</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">تسعى “Right Water” لتحقيق رؤية لعالم أكثر صحة وتجربة تكنولوجية متقدمة في مجال تنقية المياه. تعمل الشركة باستمرار على الابتكار وتطوير حلول جديدة لحماية الناس من المخاطر البيئية والأمراض المنقولة عن طريق المياه. بفضل التكنولوجيا المتقدمة والأبحاث المستمرة، تنتج “Right Water” أجهزة تنقية المياه التي تتمتع بالكفاءة العالية، وتلبي احتياجات العملاء بشكل مثالي.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                    <div class="timeline-panel" style="animation: slideInLeft 2s ease-in-out;">
+                        <div class="timeline-heading">
+                            <h4>🏆 موقعنا</h4>
+                            <h4 class="subheading">🏆 موقعنا كقائد في مجال تنقية المياه 🏆</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">أصبحت “Right Water” الآن مُعترف بها بالإجماع كرائدة لفئة أجهزة تنقية المياه. تمتلك الشركة خبرة متميزة وتاريخًا حافلاً في هذا المجال، مما جعلها تحظى بالثقة والاعتراف من قبل العملاء والمهنيين على حد سواء. تتفوق “Right Water” على المنافسين في تصميم وتصنيع وتقديم أجهزة تنقية المياه ذات الجودة العالية والأداء الممتاز.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image" style="animation: bounce 2s infinite;">
+                        <h4>كن جزءاً<br />من قصتنا!</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
+
+<!-- CSS for Animations and Styling -->
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+</style>
+
+        <!-- Team-->
+        <!-- Team -->
+<section class="page-section bg-light" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                    <h4>Parveen Anand</h4>
+                    <p class="text-muted">Lead Designer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                    <h4>Diana Petersen</h4>
+                    <p class="text-muted">Lead Marketer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                    <h4>Fox</h4>
+                    <p class="text-muted">Lead Developer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Fox Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Fox Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Fox LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+<form action="https://formspree.io/f/xvgpydyg" method="POST">
+  <div class="row align-items-stretch mb-5">
+    <div class="col-md-6">
+      <div class="form-group">
+        <!-- Name input -->
+        <label for="name">Your Name:</label>
+        <input class="form-control" id="name" type="text" name="name" placeholder="Your Name *" required />
+      </div>
+      <div class="form-group">
+        <!-- Email address input -->
+        <label for="email">Your email:</label>
+        <input class="form-control" id="email" type="email" name="email" placeholder="Your Email *" required />
+      </div>
+      <div class="form-group mb-md-0">
+        <!-- Phone number input -->
+        <label for="phone">Your Phone:</label>
+        <input class="form-control" id="phone" type="tel" name="phone" placeholder="Your Phone" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group form-group-textarea mb-md-0">
+        <!-- Message input -->
+        <label for="message">Your message:</label>
+        <textarea class="form-control" id="message" name="message" placeholder="Your Message *" required></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- Submit Button -->
+  <div class="text-center">
+    <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send</button>
+  </div>
+</form>
+
+
+
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Threads
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Illustration
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Explore
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Graphic Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Finish
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Identity
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Lines
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Branding
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Southwest
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Website Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Window
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Photography
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
